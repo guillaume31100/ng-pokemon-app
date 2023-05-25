@@ -15,7 +15,7 @@ import { Pokemon } from './pokemon';
 // implements OnInit pour méthode ngOnInit = au lancement de l'appli
 export class AppComponent implements OnInit{
   pokemonList: Pokemon[] = POKEMONS;
-  pokemonSelected: Pokemon|undefined;
+  pokemonSelected?: Pokemon|undefined;
 
   // Méthode qui se lance a l'ouverture de l'appli
   ngOnInit() {
