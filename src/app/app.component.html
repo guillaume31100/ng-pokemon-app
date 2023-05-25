@@ -1,0 +1,17 @@
+<h1>Liste de Pokémons</h1>
+<input #input (keyup.enter)="selectPokemon(input.value)" type="number" />
+
+<!-- *ngIf option affichage si... -->
+
+<p *ngIf=" pokemonSelected">
+    Vous avez selectionné le pokemon: {{ pokemonSelected?.name }}
+</p>
+
+<p *ngIf=" !pokemonSelected">
+    Aucun pokemon trouvé.
+</p>
+
+<!-- *ngfor permet de parcourir un tableau présent dans la classe du composant -->
+<p *ngFor="let pokemon of pokemonList">
+    {{pokemon.name}}
+</p>
