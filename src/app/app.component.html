@@ -1,17 +1,38 @@
-<h1>Liste de Pokémons</h1>
+<h1 class="center">Liste de Pokémons</h1>
 <input #input (keyup.enter)="selectPokemon(input.value)" type="number" />
 
 <!-- *ngIf option affichage si... -->
-
-<p *ngIf=" pokemonSelected">
+<!-- <p *ngIf=" pokemonSelected">
     Vous avez selectionné le pokemon: {{ pokemonSelected?.name }}
 </p>
-
 <p *ngIf=" !pokemonSelected">
     Aucun pokemon trouvé.
-</p>
+</p> -->
 
-<!-- *ngfor permet de parcourir un tableau présent dans la classe du composant -->
-<p *ngFor="let pokemon of pokemonList">
-    {{pokemon.name}}
-</p>
+<!-- Class container voir materialise -->
+<div class="container">
+
+    <!-- Row permet le responsive materialise -->
+    <div class="row">
+
+        <!-- *ngfor permet de parcourir un tableau présent dans la classe du composant -->
+        <!-- class col permet de définir ne nombre de carte suivant le responsive -->
+        <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
+
+            <!-- card horizontal = type de carte materialise -->
+            <div class="card horizontal">
+
+                <!-- Card-image = propriété matérialise pour definir l'image ds la card -->
+                <div class="card-image">
+                    <img [src]="pokemon.picture" alt="pokemon" />
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>{{ pokemon.name }}</p>
+                        <p><small>{{ pokemon.created }} </small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
