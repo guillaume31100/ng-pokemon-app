@@ -8,7 +8,7 @@ export class BorderCardDirective {
 
   private initialColor: string = '#f5f5f5';
   private defaultColor: string = '#009688';
-  private defaultHeight: number = 200;
+  private defaultHeight: number = 160;
 
 
   //ElementRef => Composant de Angular/core qui permet de récuperer une reference du DOM

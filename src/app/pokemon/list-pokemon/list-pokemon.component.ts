@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   selector: 'app-list-pokemon',
   templateUrl: './list-pokemon.component.html',
 })
+
 export class ListPokemonComponent {
   pokemonList: Pokemon[] = POKEMONS;
 
